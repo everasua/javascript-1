@@ -1,0 +1,264 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Se borran estilos por defecto de los enlaces. */
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+:root{
+    --wrapper-width: 80rem;
+  /*--------------------- COLORS ---------------------*/
+    --primary-theme: #9aae04; /*VERDE*/
+    --second-theme: #d9d9d9;  /*GRIS*/
+    --border-color: #777;    /*GRIS OSCURO*/
+  /*--------------------- END COLORS ---------------------*/
+  /*--------------------- FONTS ---------------------*/
+    --font-primary: 'verdana';
+    --base_font_size: 1rem;
+    --base_titles_size: 2rem;
+    --big_titles_size: 3rem;
+    font-family: var(--font-primary);
+  /*--------------------- END FONTS ---------------------*/
+  /*--------------------- SPACING ---------------------*/
+    --base_spacing-size: 1rem;  /*Margin y Padding*/
+  /*--------------------- END SPACING ---------------------*/
+ 
+}
+ 
+/*--------------------- GENERAL ---------------------*/
+ 
+*{
+  font-family: var(--font-primary);
+}
+.body{
+  margin-bottom: var(--base_spacing-size);
+}
+.generic-box{
+  margin-top: var(--base_spacing-size);
+  padding-top:var(--base_spacing-size);
+  border-top: 1px dashed var(--primary-theme);
+}
+/*--------------------- END GENERAL ---------------------*/
+ 
+/*--------------------- WRAPPER ---------------------*/
+ .wrapper{
+   width: var(--wrapper-width);
+   margin: 0 auto;
+ }
+/*--------------------- END WRAPPER ---------------------*/
+ 
+ 
+/*--------------------- HEADER ---------------------*/
+ .header {
+   background-color: var(--second-theme);
+ }
+
+ .header .wrapper{
+   padding-bottom: var(--base_spacing-size);
+ }
+ .header .title{
+  padding-top: var(--base_spacing-size);
+  padding-bottom: var(--base_spacing-size);
+  font-size: var(--big_titles_size);
+ }
+ .menu {
+   display: flex;
+   flex-direction: row;
+   list-style-type: none;
+ }
+ .menu-item{
+  border: 1px solid var(--border-color);
+  height: 50px;
+  background-color: white;
+  padding: 0 var(--base_spacing-size);
+  display: flex;
+  align-items: center;
+ }
+ .menu-item .link{
+  color: var(--primary-theme);
+ }
+
+ .menu-item:hover, .menu-item:hover .link{
+   background-color: var(--primary-theme);
+   color: white;
+   text-decoration: underline;
+   cursor: pointer;
+ }
+
+/*--------------------- END HEADER ---------------------*/
+ 
+ 
+/*--------------------- MENU -------------------*/
+ 
+/*--------------------- END MENU -------------------*/
+ 
+ 
+/*--------------------- BODY BASE -------------------*/
+ .news{
+   display: flex;
+   flex-direction: row;
+ }
+
+ .news .title{
+   margin-top: var(--base_spacing-size);
+   font-size: var(--base_titles_size);
+ }
+ .description {
+  background-color: var(--second-theme);
+  margin-top: var(--base_spacing-size);
+  margin-right: 40px;
+  padding: var(--base_spacing-size);
+ }
+ .publicity{
+   background-color: var(--second-theme);
+   flex: 1 1 40%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-left: 1px solid var(--primary-theme);
+
+  }
+/*--------------------- END BODY BASE -------------------*/
+ 
+ 
+/*--------------------- FORM -------------------*/
+.form{
+  padding-top: var(--base_spacing-size);
+}
+
+.form-title{
+  font-size: var(--base_titles_size);
+}
+.personal-data{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.other-data{
+  display: flex;
+  flex-flow: row nowrap;
+ 
+}
+.personal-data .input-text, .other-data .input-text{
+  flex: 1 0 27%;
+  max-width: 27%;
+}
+
+.personal-data .input-radio, .other-data .input-text{
+  flex: 1 0 27%;
+  max-width: 27%;
+  padding: var(--base_spacing-size)
+}
+
+.input-text, .input-checkbox{
+  padding: var(--base_spacing-size);
+}
+
+
+.input-text .label, .input-checkbox .label{
+  margin-bottom: var(--base_spacing-size);
+  display: block;
+  width: 100%;
+}
+
+.input-text .input{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--primary-theme)
+}
+
+.list-ordered{
+  margin-left: 40px;
+}
+
+.list-ordered li{
+  padding-bottom: 8px;
+}
+
+
+.other-data .input-text {
+  flex: 1 0 27%;
+  max-width: 27%;
+}
+
+.legend{
+  margin-left: var(--base_spacing-size);
+  padding: 0 var(--base_spacing-size); 
+}
+
+.fieldset {
+  border: 2px solid var(--border-color);
+  margin-bottom: var(--base_spacing-size);
+}
+
+.submit, .reset {
+  background-color: var(--primary-theme);
+  color: white;
+  border: 1px solid var(--border-color);
+  /* Incluyo 10px de padding porque 16 es demasiado */
+  padding: 10px 0;
+  width: 140px;
+  font-size: 1rem;
+}
+
+.submit:hover, .reset:hover {
+  cursor: pointer;
+  background-color: #717e11;
+}
+
+.checkbox{
+  appearance: none;
+  background-color: var(--second-theme);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 6px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox:active, .checkbox:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.checkbox:checked {
+	background-color: var(--second-theme);
+	border: 1px solid var(--border-color);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: var(--primary-theme);
+}
+
+.checkbox:checked:after {
+	content: '\2714';
+	font-size: 10px;
+	position: absolute;
+	top: -1px;
+	left: 2px;
+	color: var(--primary-theme);
+}
+/*--------------------- END FORM -------------------*/
+ 
+ 
+/*--------------------- TABLE -------------------*/
+
+  .table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table-title{
+    text-align: start;
+    margin: 0 0 var(--base_spacing-size) var(--base_spacing-size);
+    font-size: var(--base_titles_size);
+  }
+  .table th, .table td{
+    border: 1px solid var(--border-color);
+    padding: var(--base_spacing-size)
+  }
+  .table th{
+    background-color: var(--primary-theme);
+  }
+/*--------------------- END TABLE -------------------*/
