@@ -1,7 +1,7 @@
 // Datos iniciales de la tabla
 const persons = [
-  {name: 'Carlos',surname: 'Casaluenga',telephone:'987654321',numberDoc:'12345678-A',sports:['Fútbol','Padel']},
-  {name: 'Jesus',surname: 'Cardenas',telephone:'987654999',numberDoc:'12345678-Z',sports:['Rugby','Pelota vasca']}
+  {name: 'Carlos',surname: 'Casaluenga',telephone:'987654321',numberDoc:'12345678-A',sports:[' Fútbol',' Padel']},
+  {name: 'Jesus',surname: 'Cardenas',telephone:'987654999',numberDoc:'12345678-Z',sports:[' Rugby',' Pelota vasca']}
 ];
 // Referencia a la tabla del HTML
 const table = document.getElementById('table');
